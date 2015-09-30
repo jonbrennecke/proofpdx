@@ -1,12 +1,11 @@
 import React from 'react';
+import { Router, Route } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 
-class Application extends React.Component {
-  render() {
-    return <h1>{"Hello world!"}</h1>;
-  }
-}
+import LandingPage from 'app/components/pages/LandingPage';
 
-
-window.onload = () => {
-    React.render(React.createElement(Application), document.body);
-}
+window.onload = () => React.render((
+    <Router history={createBrowserHistory()}>
+        <Route path="*" component={LandingPage}/>
+    </Router>
+), document.body);

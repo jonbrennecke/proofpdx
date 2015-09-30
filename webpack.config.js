@@ -7,22 +7,27 @@ module.exports = {
     cache: true,
     watch: true,
     entry: {
-        app: path.join(__dirname, 'app/app.jsx'),
+        app: path.join(__dirname, 'app', 'bootstrap.js')
     },
     output: {
         publicPath: '/static/js/',
-        filename: "bundle.[name].js"
+        filename: 'bundle.[name].js'
     },
     resolve: {
-        modulesDirectories: [ path.join(__dirname, 'node_modules') ],
+        modulesDirectories: [ 'node_modules' ],
         extensions: ['', '.js', '.jsx'],
         alias: {
-            app: path.join(__dirname, 'app')
+            app: path.join(__dirname, 'app'),
+            css: path.join(__dirname, 'public', 'stylesheets')
         }
     },
     resolveLoader: { root: path.join(__dirname, 'node_modules') },
     module: {
         loaders: [
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
             {
                 test: /[\/]promise\.js$/,
                 loaders: ['exports?Promise']
