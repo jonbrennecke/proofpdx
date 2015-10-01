@@ -1,5 +1,3 @@
-"use strict";
-
 var path = require('path');
 
 module.exports = {
@@ -10,7 +8,7 @@ module.exports = {
         app: path.join(__dirname, 'app', 'bootstrap.js')
     },
     output: {
-        publicPath: '/static/js/',
+        publicPath: '/',
         filename: 'bundle.[name].js'
     },
     resolve: {
@@ -29,17 +27,9 @@ module.exports = {
                 loader: 'style-loader!css-loader'
             },
             {
-                test: /[\/]promise\.js$/,
-                loaders: ['exports?Promise']
-            },
-            {
-                test: /[\/](localforage|indexeddb|localstorage|websql)\.js$/,
-                loaders: ['imports?this=>window']
-            },
-            {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: "jsx-loader"
+                loader: 'jsx-loader'
             },
             {
                 test: /\.jsx?$/,
@@ -48,6 +38,7 @@ module.exports = {
                 query: {
                     cacheDirectory: true,
                     optional: [
+                        'runtime',
                         'es7.comprehensions',
                         'es7.classProperties',
                         'es7.functionBind',

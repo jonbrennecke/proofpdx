@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+/* line 5, ../sass/landing-page.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/landing-page.scss */
+body {
+  margin: 0;
+  background: #30223D;
+  color: #b098c6;
+}
+
+/* line 15, ../sass/landing-page.scss */
+.landing-page {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 22, ../sass/landing-page.scss */
+.title, .subtitle {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 30, ../sass/landing-page.scss */
+.title {
+  font-size: 3em;
+  font-family: 'Source Serif Pro', serif;
+  margin-top: 0.75em;
+  color: #fff;
+}
+
+/* line 37, ../sass/landing-page.scss */
+.subtitle {
+  font-size: 1.5em;
+  margin: 2em 0;
+}
+
+/* line 42, ../sass/landing-page.scss */
+.columns {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 46, ../sass/landing-page.scss */
+.tiles {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-top: 2em;
+}
+/* line 57, ../sass/landing-page.scss */
+.tiles div {
+  background: #573d6e;
+  color: #8a67aa;
+  border: 1px solid #70508f;
+  border-radius: 0.25em;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 2px;
+  padding: 0.25em 0.5em;
+}

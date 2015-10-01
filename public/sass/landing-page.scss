@@ -1,3 +1,68 @@
-.background {
-    
+@import "compass";
+@import url(http://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #30223D;
+    color: lighten(#30223D, 50%);
+}
+
+.landing-page {
+    height: 100%;
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+.title, .subtitle {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    font-family: 'Source Serif Pro', serif;
+    margin-top: 0.75em;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin: 2em 0;
+}
+
+.columns {
+    @include flex-direction(column);
+}
+
+.tiles {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 2em;
+
+    div {
+        background: lighten(#30223D, 15%);
+        color: lighten(#30223D, 35%);
+        border: 1px solid lighten(#30223D, 25%);
+        border-radius: 0.25em;
+        float: left;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin: 2px;
+        padding: 0.25em 0.5em;
+    }
 }
